@@ -1,0 +1,46 @@
+body {
+    color: white;
+    background-color: #111;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: 'Roboto';
+    margin: 55px;
+}
+
+input {
+    background-color: #222;
+    border: solid 1px white;
+    color: #cbcbcb;
+    font-family: 'Roboto Light';
+    height: 50px;
+    width: 35%;
+    text-align: center;
+    font-size: larger;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+button {
+    margin: 15px;
+    height: 50px;
+    width: 150px;
+    background-color: transparent;
+    border: solid 2px white;
+    color: #cbcbcb;
+}
+
+button:hover {
+    transition: 200ms;
+    background-color: rgba(255, 255,255, 0.2);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
