@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Captcha Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <h1>Welcome Human.</h1>
+        <label class="unselectable"><p>Captcha Text : <strong>{{captcha}}</strong></p></label>
+        <input type="text" placeholder="Input Captcha." id="captchaString"/><br>
+        <button id="submitBtn" onclick="checkCaptcha()">Submit</button>
+        <a href="/refreshCaptcha"><button id="refreshBtn">Refresh Captcha</button></a>
+    </body>
+    <script>
+        var captcha = "{{captcha}}";
+
+        function checkCaptcha() {
+            var inputString = document.getElementById("captchaString").value;
+
+            if (inputString == captcha) {
+                console.log("Success");
+            } else {
+                console.log("Try again.");
+            }
+        }
+    </script>
+</html>
