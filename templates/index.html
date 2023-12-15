@@ -11,18 +11,20 @@
         <label class="unselectable"><p>Captcha Text : <strong>{{captcha}}</strong></p></label>
         <input type="text" placeholder="Input Captcha." id="captchaString"/><br>
         <button id="submitBtn" onclick="checkCaptcha()">Submit</button>
-        <a href="/refreshCaptcha"><button id="refreshBtn">Refresh Captcha</button></a>
+        <a href="/refreshCaptcha"><button id="refreshBtn">Refresh Captcha</button></a><br>
+        <p id="captchaStatus"></p>
     </body>
     <script>
         var captcha = "{{captcha}}";
+        var statusText = document.getElementById("captchaStatus");
 
         function checkCaptcha() {
             var inputString = document.getElementById("captchaString").value;
 
             if (inputString == captcha) {
-                console.log("Success");
+                statusText.innerHTML = "Success!";
             } else {
-                console.log("Try again.");
+                statusText.innerHTML = "Try Again!";
             }
         }
     </script>
